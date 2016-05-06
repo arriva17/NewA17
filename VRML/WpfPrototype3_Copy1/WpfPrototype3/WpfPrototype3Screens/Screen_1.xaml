@@ -1,0 +1,128 @@
+﻿<UserControl x:Class="WpfPrototype3Screens.Screen_1"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+             xmlns:local="clr-namespace:WpfPrototype3Screens"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:pi="http://schemas.microsoft.com/prototyping/2010/interactivity"
+             x:Name="Screen_1_Name"
+             Width="800"
+             Height="600"
+             Background="#FFD7CCC8"
+             mc:Ignorable="d">
+
+    <Grid x:Name="LayoutRoot" Background="#FFD7CCC8">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" MinWidth="640" />
+        </Grid.ColumnDefinitions>
+        <Border Height="96"
+                Margin="0,0,-160,0"
+                VerticalAlignment="Top"
+                Background="#FF795548"
+                BorderThickness="1">
+            <Border Height="27"
+                    Margin="0,0,-2,0"
+                    VerticalAlignment="Top"
+                    Background="#FF5D4037"
+                    BorderBrush="Black"
+                    BorderThickness="1">
+                <Label x:Name="label"
+                       Content="VRMLLA"
+                       Foreground="White" />
+            </Border>
+        </Border>
+        <Label x:Name="___Label___Меню_"
+               Width="39.877"
+               Height="24.04"
+               Margin="8,71.96,0,0"
+               HorizontalAlignment="Left"
+               VerticalAlignment="Top"
+               Content="Menu"
+               FontSize="10.667"
+               Foreground="White" />
+        <Border Height="22"
+                Margin="0,0,-160,0"
+                VerticalAlignment="Bottom"
+                Background="#FF795548"
+                BorderBrush="Black"
+                BorderThickness="1">
+            <ResizeGrip />
+        </Border>
+        <Menu Width="46.75"
+              Height="44.288"
+              Margin="4,32,0,0"
+              HorizontalAlignment="Left"
+              VerticalAlignment="Top">
+            <MenuItem Width="46.75"
+                      Height="44.288"
+                      Header="">
+                <MenuItem.Background>
+                    <ImageBrush ImageSource="ic_menu_black_48dp.png" Stretch="Uniform" />
+                </MenuItem.Background>
+                <MenuItem Header="Open">
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="Click">
+                            <pi:NavigateToScreenAction TargetScreen="WpfPrototype3Screens.Screen_1_1" />
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </MenuItem>
+
+                <MenuItem Header="File Save">
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="Click">
+                            <pi:NavigateToScreenAction TargetScreen="WpfPrototype3Screens.Screen_1_1" />
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </MenuItem>
+
+
+                <MenuItem Header="Exit" />
+            </MenuItem>
+        </Menu>
+        <Button x:Name="___Button___Settings_"
+                Width="56.5"
+                Height="44.288"
+                Margin="0,32,-129.25,0"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Top"
+                BorderBrush="{x:Null}"
+                Content="Button"
+                Foreground="{x:Null}">
+            <Button.Background>
+                <ImageBrush ImageSource="settings-cogwheel-button.png" Stretch="Uniform" />
+            </Button.Background>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="Click">
+                    <pi:NavigateToScreenAction TargetScreen="WpfPrototype3Screens.Screen_1_3" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Button>
+        <Label Width="56.5"
+               Height="27.46"
+               Margin="0,68.96,-129.25,0"
+               HorizontalAlignment="Right"
+               VerticalAlignment="Top"
+               Background="{x:Null}"
+               Content="Settings"
+               Foreground="White" />
+        <Button Width="51"
+                Height="44.288"
+                Margin="0,32,-35,0"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Top"
+                BorderBrush="{x:Null}"
+                Content="Button"
+                Foreground="{x:Null}">
+            <Button.Background>
+                <ImageBrush ImageSource="show-more-button-with-three-dots.png" Stretch="Uniform" />
+            </Button.Background>
+        </Button>
+        <Label Margin="0,68.96,-35,0"
+               HorizontalAlignment="Right"
+               VerticalAlignment="Top"
+               Content="About us"
+               Foreground="White" />
+        <InkCanvas Margin="8,100.42,-100,26" Background="{x:Null}" />
+    </Grid>
+</UserControl>
